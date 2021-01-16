@@ -13,12 +13,12 @@ pipeline {
         }
         stage('build') {
             steps {
-                mvn clean install -DskipTests
+                bat mvn clean install -DskipTests
             }
         }
         stage('test') {
             steps {
-                mvn clean install
+                bat mvn clean install
             }
         }
     }
