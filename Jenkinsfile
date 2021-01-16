@@ -3,7 +3,12 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "Hi"
+                mvn clean install -DskipTests
+            }
+        }
+        stage('test') {
+            steps {
+                mvn clean install
             }
         }
     }
